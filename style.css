@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'Figtree';
+  src: url('assets/fonts/Figtree-VariableFont_wght.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: #F4D04E;
+  --secondary-color: #111111;
+  --tertiary-color: #6B6B6B;
+  --quaternary-color: #FFFFFF;
+
+  --font-primary: 'Figtree', serif;
+
+  --fs-preset-1: 24px;
+  --fs-preset-2: 16px;
+  --fs-preset-3: 14px;
+
+  --fw-medium: 500;
+  --fw-extra-bold: 800;
+
+  --lh-default: 1.5;
+  --ls-default: 0px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-primary);
+  line-height: var(--lh-default);
+  letter-spacing: var(--ls-default);
+  background-color: var(--primary-color);
+}
+
+.card-blog {
+  width: 384px;
+  height: 522px;
+  background-color: var(--quaternary-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 1);
+}
+
+.card-blog img {
+  width: auto;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.badge {
+  padding: 4px 12px;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: var(--fs-preset-3);
+  font-weight: var(--fw-extra-bold);
+}
+
+.card-content h2 {
+  font-size: var(--fs-preset-3);
+  font-weight: var(--fw-medium);
+  color: var(--secondary-color);
+}
+
+.card-content h1 {
+  font-size: var(--fs-preset-1);
+  font-weight: var(--fw-extra-bold);
+  color: var(--secondary-color);
+}
+
+.card-content h1:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.card-content p {
+  font-size: var(--fs-preset-2);
+  font-weight: var(--fw-medium);
+  color: var(--tertiary-color);
+}
+
+.card-author {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.card-author img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.card-author div {
+  font-size: var(--fs-preset-3);
+  font-weight: var(--fw-extra-bold);
+  color: var(--secondary-color);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 24px;
+  font-size: 12px;
+}
